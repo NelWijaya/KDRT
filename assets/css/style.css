@@ -1,0 +1,230 @@
+.borderx {
+  border: solid 1px black;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700;800&family=Mansalva&display=swap");
+
+/* SIZE */
+body {
+  min-height: 100vh;
+}
+
+#op-1 img,
+#op-2 img {
+  max-width: 900px;
+  margin-top: -160px;
+}
+
+#op-3 img {
+  margin-top: -100px;
+  max-width: 800px;
+}
+
+#op-2 p,
+#op-3 p {
+  margin-top: -50px;
+}
+
+#op-6 p {
+  font-size: 64px;
+  color: #c3acd0;
+}
+
+#op-6 .btn {
+  background-color: #c3acd0 !important;
+}
+
+#op-6 .btn:hover {
+  background-color: #9b76b1 !important;
+}
+
+.btn-primary {
+  background-color: #674188 !important;
+  padding: 20px 160px !important;
+  font-size: 64px !important;
+  border: #674188 !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-weight: 700 !important;
+}
+
+.btn-secondary {
+  background-color: #c3acd0 !important;
+  color: black !important;
+  font-weight: 700 !important;
+  padding: 20px 160px !important;
+  font-size: 64px !important;
+  border: #c3acd0 !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.btn-secondary:hover {
+  background-color: #9b76b1 !important;
+  padding: 20px 160px !important;
+  font-size: 64px !important;
+  border: #9b76b1 !important;
+}
+
+.btn-primary:hover {
+  background-color: #8b74a0 !important;
+  padding: 20px 160px !important;
+  font-size: 64px !important;
+  border: #8b74a0 !important;
+}
+
+#rules ol .progress {
+  width: 300px;
+  height: 30px;
+}
+
+#rules .btn {
+  padding: 8px 72px !important;
+  font-size: 40px !important;
+}
+
+#ribbon .btn {
+  padding: 8px 24px !important;
+  font-size: 32px !important;
+}
+
+#case .btn {
+  padding: 22px 78px !important;
+  font-size: 32px !important;
+  width: fit-content !important;
+}
+
+#ribbon .btn-white {
+  background-color: white !important;
+  border: white !important;
+  color: #662d91 !important;
+  font-weight: 700;
+}
+
+#ribbon .btn-white:hover {
+  background-color: rgb(228, 228, 228) !important;
+}
+
+/* FONT FAMILY */
+.ff-inter,
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.ff-mansalva {
+  font-family: "Mansalva", cursive;
+}
+
+/* COLOR */
+.bg-color-purple {
+  background-color: #c3acd0;
+}
+
+.bg-color-purple2 {
+  background-color: #381652;
+}
+
+div.progress {
+  background-color: #3d3333;
+}
+
+div.progress-bar {
+  background-color: #7c9f19 !important;
+}
+
+/* FONT */
+p {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.small {
+  font-size: 24px;
+}
+
+#rules,
+#menu,
+#case {
+  background-color: #f7efe5;
+}
+
+.peringatan {
+  font-size: 96px;
+  font-weight: 700;
+  margin-bottom: 70px;
+  color: #7a0e0e;
+}
+
+#menu h1 {
+  font-size: 150px;
+  font-weight: 400;
+  color: #674188;
+}
+
+#rules h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+#rules h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+#rules p,
+#rules ol {
+  text-align: left !important;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+#rules ol li div p {
+  font-size: 22px;
+}
+
+#rules span {
+  color: #674188;
+}
+
+#ribbon h1 {
+  font-weight: 400;
+  font-size: 64px;
+  color: #662d91;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+span.pp {
+  color: #662d91;
+}
+
+/* OTHERS */
+#op-peringatan {
+  cursor: pointer;
+}
+
+#ribbon ul li {
+  list-style-image: url(/assets/public/images/pita.png);
+}
+
+#case .container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#case .progress span.progress-completed {
+  color: white;
+}
+
+.progress {
+  position: relative;
+  height: 25px;
+}
+
+.progress > .progress-completed {
+  position: absolute;
+  right: 0px;
+  font-weight: 800;
+  padding: 3px 10px;
+}
