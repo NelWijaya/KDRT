@@ -94,6 +94,12 @@ body {
   width: fit-content !important;
 }
 
+#case h1 {
+  font-size: 80px;
+  color: #674188;
+  font-weight: 700;
+}
+
 #ribbon .btn-white {
   background-color: white !important;
   border: white !important;

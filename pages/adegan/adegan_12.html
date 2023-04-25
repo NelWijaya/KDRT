@@ -84,11 +84,11 @@
       </div>
 
       <div class="row btn-bottom d-flex text-center mx-0 mb-5 pb-5">
-        <a class="btn btn-primary mt-3 mx-auto" onclick="goto_(13)">
+        <a class="btn btn-primary mt-3 mx-auto" onclick="goto_(13, 5, 5, 5)">
           Lanjutkan laporannya!
         </a>
 
-        <a class="btn btn-primary mt-3 mx-auto" onclick="">
+        <a class="btn btn-primary mt-3 mx-auto" onclick="goto_(5, 5, 5, 5)">
           Terlalu rumit, aku tidak jadi lapor!
         </a>
       </div>
@@ -104,31 +104,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
     <script>
-      //   setCookie("bar_kesehatan", bar_kesehatan - 10);
-      //   setCookie("bar_kebahagiaan", bar_kebahagiaan - 10);
-      //   setCookie("bar_social", bar_social - 10);
-
-      setCookie("bar_kesehatan", 80);
-      setCookie("bar_kebahagiaan", 87.5);
-      setCookie("bar_social", 80);
-
-      let bar_kesehatan = getCookie("bar_kesehatan");
-      let bar_kebahagiaan = getCookie("bar_kebahagiaan");
-      let bar_social = getCookie("bar_social");
-
-      document.querySelector("#bar_kesehatan .progress-bar").style.width =
-        bar_kesehatan + "%";
-      document.querySelector("#bar_kesehatan span").innerHTML =
-        bar_kesehatan + "%";
-
-      document.querySelector("#bar_kebahagiaan .progress-bar").style.width =
-        bar_kebahagiaan + "%";
-      document.querySelector("#bar_kebahagiaan span").innerHTML =
-        bar_kebahagiaan + "%";
-
-      document.querySelector("#bar_social .progress-bar").style.width =
-        bar_social + "%";
-      document.querySelector("#bar_social span").innerHTML = bar_social + "%";
+      checkCookie(12);
     </script>
   </body>
 </html>
