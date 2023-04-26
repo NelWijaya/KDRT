@@ -9,20 +9,59 @@ body {
   min-height: 100vh;
 }
 
-#op-1 img,
-#op-2 img {
-  max-width: 900px;
-  margin-top: -160px;
-}
+@media only screen and (max-width: 620px) {
+  a.btn-primary,
+  a.btn-secondary,
+  #ribbon a.btn-white,
+  #ribbon a.btn-primary,
+  #case a.btn {
+    padding: 12px 24px !important;
+    font-size: 24px !important;
+  }
 
-#op-3 img {
-  margin-top: -100px;
-  max-width: 800px;
-}
+  #op-1 p,
+  #op-2 p,
+  #op-3 p,
+  #op-4 p,
+  #op-5 p,
+  #op-peringatan p,
+  #case p {
+    font-size: 18px;
+  }
+  #op-6 p,
+  #rules h1,
+  #ribbon h1 {
+    font-size: 32px !important;
+  }
 
-#op-2 p,
-#op-3 p {
-  margin-top: -50px;
+  #op-peringatan h3 {
+    font-size: 40px;
+  }
+
+  #menu h1 {
+    font-size: 52px !important;
+  }
+
+  #rules p,
+  #rules ol li,
+  #rules ol li h3 {
+    font-size: 16px !important;
+  }
+
+  #rules .progress {
+    height: 20px !important;
+  }
+
+  #ribbon ul li {
+    list-style-image: none !important;
+    list-style: none;
+    padding: 30px 30px;
+    margin-left: -40px;
+    background-image: url(/assets/public/images/pita\ 1.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 50px;
+  }
 }
 
 #op-6 p {
@@ -61,15 +100,11 @@ body {
 
 .btn-secondary:hover {
   background-color: #9b76b1 !important;
-  padding: 20px 160px !important;
-  font-size: 64px !important;
   border: #9b76b1 !important;
 }
 
 .btn-primary:hover {
   background-color: #8b74a0 !important;
-  padding: 20px 160px !important;
-  font-size: 64px !important;
   border: #8b74a0 !important;
 }
 
@@ -100,14 +135,14 @@ body {
   font-weight: 700;
 }
 
-#ribbon .btn-white {
+#ribbon a.btn-white {
   background-color: white !important;
   border: white !important;
   color: #662d91 !important;
   font-weight: 700;
 }
 
-#ribbon .btn-white:hover {
+#ribbon a.btn-white:hover {
   background-color: rgb(228, 228, 228) !important;
 }
 
@@ -124,6 +159,10 @@ body {
 /* COLOR */
 .bg-color-purple {
   background-color: #c3acd0;
+}
+
+.bg-wh {
+  background-color: #fffbf5;
 }
 
 .bg-color-purple2 {

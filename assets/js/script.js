@@ -1,25 +1,5 @@
-function goto_op1() {
-  location.href = "/pages/opening/opening_1.html";
-}
-
-function goto_op2() {
-  location.href = "/pages/opening/opening_2.html";
-}
-
-function goto_op3() {
-  location.href = "/pages/opening/opening_3.html";
-}
-
-function goto_op4() {
-  location.href = "/pages/opening/opening_4.html";
-}
-
-function goto_op5() {
-  location.href = "/pages/opening/opening_5.html";
-}
-
-function goto_op6() {
-  location.href = "/pages/opening/opening_6.html";
+function goto_op(target) {
+  location.href = "/pages/opening/opening_" + target + ".html";
 }
 
 function goto_menu() {
@@ -28,6 +8,10 @@ function goto_menu() {
 
 function goto_rules() {
   location.href = "/pages/menu/rules.html";
+}
+
+function goto_ribbon() {
+  location.href = "/pages/menu/ribbon.html";
 }
 
 function goto_mini() {
