@@ -62,6 +62,10 @@ body {
     background-position: left center;
     background-size: 50px;
   }
+
+  #case h1 {
+    font-size: 32px !important;
+  }
 }
 
 #op-6 p {

@@ -93,7 +93,21 @@
     -->
   </body>
   <script>
-    checkCookie(1);
+    setCookie("bar_kesehatan", 100);
+    setCookie("bar_kebahagiaan", 100);
+    setCookie("bar_social", 100);
+
+    // Mengarahkan pengguna ke halaman awal ketika halaman dimuat ulang atau tombol "back" ditekan
+    if (window.performance) {
+      // Mendapatkan jenis navigasi yang digunakan oleh pengguna
+      var navigationType = performance.getEntriesByType("navigation")[0].type;
+
+      // Memeriksa apakah navigasi adalah "reload" atau "back_forward"
+      if (navigationType === "back_forward") {
+        // Mengarahkan pengguna ke halaman awal
+        window.location.href = "../menu/menu.html";
+      }
+    }
   </script>
   <script src="/assets/js/bar.js"></script>
 </html>

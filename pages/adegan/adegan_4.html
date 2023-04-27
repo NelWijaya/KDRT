@@ -71,12 +71,15 @@
       </div>
 
       <div class="row">
-        <img
-          src="/assets/public/images/Adegan 4.PNG"
-          style="width: 600px"
-          class="img-fluid mx-auto"
-          alt="phone notification"
-        />
+        <div class="row">
+          <div class="col-10 col-md-4 mx-auto">
+            <img
+              src="/assets/public/images/Adegan 4.PNG"
+              class="img-fluid mx-auto"
+              alt="phone notification"
+            />
+          </div>
+        </div>
         <p>
           Meski aku sudah bersabar dengan perselingkuhannya, suamiku malah
           mengomentari tubuhku dengan sebutan <span class="pp">‘Gendut’</span> .
@@ -90,11 +93,8 @@
         </p>
       </div>
 
-      <div class="row btn-bottom d-flex text-center mx-0 mb-5 pb-5">
-        <a
-          class="btn btn-primary mt-3 mx-auto"
-          onclick="goto_(5, 10 , 10 , 10)"
-        >
+      <div class="row btn-bottom d-flex text-center mx-0 pb-5">
+        <a class="btn btn-primary mt-3 mx-auto" onclick="goto_(5, 10, 10, 10)">
           Harus sabar demi anak
         </a>
 
@@ -114,5 +114,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
   </body>
+  <script>
+    // Mengarahkan pengguna ke halaman awal ketika halaman dimuat ulang atau tombol "back" ditekan
+    if (window.performance) {
+      // Mendapatkan jenis navigasi yang digunakan oleh pengguna
+      var navigationType = performance.getEntriesByType("navigation")[0].type;
+
+      // Memeriksa apakah navigasi adalah "reload" atau "back_forward"
+      if (navigationType === "back_forward") {
+        // Mengarahkan pengguna ke halaman awal
+        window.location.href = "../menu/menu.html";
+      }
+    }
+  </script>
   <script src="/assets/js/bar.js"></script>
 </html>

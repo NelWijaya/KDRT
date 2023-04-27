@@ -42,90 +42,216 @@ function getCookie(cname) {
   return "";
 }
 
-function checkCookie(current) {
-  const last = getCookie("now");
-  setCookie("last", last);
-  setCookie("now", current);
+// function checkCookie(current) {
+//   const last = getCookie("now");
+//   setCookie("last", last);
+//   setCookie("now", current);
 
-  if (current < 3) {
-    setCookie("bar_kesehatan", 100);
-    setCookie("bar_kebahagiaan", 100);
-    setCookie("bar_social", 100);
-  } else if (
-    (current == 3 && last == 2) ||
-    (current == 3 && last == 4) ||
-    (current == 3 && last == 3)
-  ) {
-    setCookie("bar_kesehatan", 90);
-    setCookie("bar_kebahagiaan", 90);
-    setCookie("bar_social", 90);
-  } else if (
-    (current == 4 && last == 3) ||
-    (current == 4 && last == 12) ||
-    (current == 4 && last == 4)
-  ) {
-    setCookie("bar_kesehatan", 85);
-    setCookie("bar_kebahagiaan", 85);
-    setCookie("bar_social", 85);
-  } else if ((current == 12 && last == 4) || (current == 12 && last == 12)) {
-    setCookie("bar_kesehatan", 80);
-    setCookie("bar_kebahagiaan", 87.5);
-    setCookie("bar_social", 80);
-  } else if (
-    (current == 13 && last == 12) ||
-    (current == 13 && last == 14) ||
-    (current == 13 && last == 13)
-  ) {
-    setCookie("bar_kesehatan", 75);
-    setCookie("bar_kebahagiaan", 82.5);
-    setCookie("bar_social", 75);
-  } else if (
-    (current == 14 && last == 13) ||
-    (current == 14 && last == "end2") ||
-    (current == 14 && last == 14)
-  ) {
-    setCookie("bar_kesehatan", 10);
-    setCookie("bar_kebahagiaan", 10);
-    setCookie("bar_social", 10);
-  } else if (
-    (current == "end2" && last == 13) ||
-    (current == "end2" && last == "end2") ||
-    current == "end2"
-  ) {
-    setCookie("bar_kesehatan", 0);
-    setCookie("bar_kebahagiaan", 10);
-    setCookie("bar_social", 0);
-  } else if (
-    (current == 5 && last == 4) ||
-    (current == 5 && last == 28) ||
-    (current == 5 && last == 6)
-  ) {
-    setCookie("bar_kesehatan", 75);
-    setCookie("bar_kebahagiaan", 75);
-    setCookie("bar_social", 75);
-  } else if (current == 5 && last == 12) {
-    setCookie("bar_kesehatan", 70);
-    setCookie("bar_kebahagiaan", 77.5);
-    setCookie("bar_social", 70);
-  }
+//   if (current < 3) {
+//     setCookie("bar_kesehatan", 100);
+//     setCookie("bar_kebahagiaan", 100);
+//     setCookie("bar_social", 100);
+//   } else if (
+//     (current == 3 && last == 2) ||
+//     (current == 3 && last == 4) ||
+//     (current == 3 && last == 3)
+//   ) {
+//     setCookie("bar_kesehatan", 90);
+//     setCookie("bar_kebahagiaan", 90);
+//     setCookie("bar_social", 90);
+//   } else if (
+//     (current == 4 && last == 3) ||
+//     (current == 4 && last == 12) ||
+//     (current == 4 && last == 4) ||
+//     (current == 4 && last == 5)
+//   ) {
+//     setCookie("bar_kesehatan", 85);
+//     setCookie("bar_kebahagiaan", 85);
+//     setCookie("bar_social", 85);
+//   } else if ((current == 5 && last == 4) || (current == 5 && last == 6)) {
+//     setCookie("bar_kesehatan", 75);
+//     setCookie("bar_kebahagiaan", 75);
+//     setCookie("bar_social", 75);
+//   } else if (
+//     (current == 12 && last == 4) ||
+//     (current == 12 && last == 12) ||
+//     (current == 12 && last == 13) ||
+//     (current == 12 && last == 5)
+//   ) {
+//     setCookie("bar_kesehatan", 80);
+//     setCookie("bar_kebahagiaan", 87.5);
+//     setCookie("bar_social", 80);
+//   } else if (
+//     (current == 13 && last == 12) ||
+//     (current == 13 && last == 14) ||
+//     (current == 13 && last == 13)
+//   ) {
+//     setCookie("bar_kesehatan", 75);
+//     setCookie("bar_kebahagiaan", 82.5);
+//     setCookie("bar_social", 75);
+//   } else if (
+//     (current == 14 && last == 13) ||
+//     (current == 14 && last == "end2") ||
+//     (current == 14 && last == 14)
+//   ) {
+//     setCookie("bar_kesehatan", 10);
+//     setCookie("bar_kebahagiaan", 10);
+//     setCookie("bar_social", 10);
+//   } else if (
+//     (current == 15 && last == 6) ||
+//     (current == 15 && last == 16) ||
+//     (current == 15 && last == 7)
+//   ) {
+//     setCookie("bar_kesehatan", 60);
+//     setCookie("bar_kebahagiaan", 70);
+//     setCookie("bar_social", 60);
+//   } else if (current == 7 && last == 15) {
+//     setCookie("bar_kesehatan", 55);
+//     setCookie("bar_kebahagiaan", 65);
+//     setCookie("bar_social", 55);
+//   } else if ((current == 16 && last == 15) || (current == 16 && last == 17)) {
+//     setCookie("bar_kesehatan", 55);
+//     setCookie("bar_kebahagiaan", 72.5);
+//     setCookie("bar_social", 55);
+//   } else if (
+//     (current == 17 && last == 16) ||
+//     (current == 17 && last == 18) ||
+//     (current == 17 && last == "end3")
+//   ) {
+//     setCookie("bar_kesehatan", 50);
+//     setCookie("bar_kebahagiaan", 72.5);
+//     setCookie("bar_social", 50);
+//   } else if (
+//     (current == 18 && last == 17) ||
+//     (current == 18 && last == "end3")
+//   ) {
+//     setCookie("bar_kesehatan", 55);
+//     setCookie("bar_kebahagiaan", 77.5);
+//     setCookie("bar_social", 55);
+//   } else if (current == "end3" && last == 17) {
+//     setCookie("bar_kesehatan", 55);
+//     setCookie("bar_kebahagiaan", 77.5);
+//     setCookie("bar_social", 0);
+//   } else if (current == "end3" && last == 18) {
+//     setCookie("bar_kesehatan", 50);
+//     setCookie("bar_kebahagiaan", 72.5);
+//     setCookie("bar_social", 0);
+//   } else if (
+//     (current == "end2" && last == 13) ||
+//     (current == "end2" && last == "end2") ||
+//     current == "end2"
+//   ) {
+//     setCookie("bar_kesehatan", 0);
+//     setCookie("bar_kebahagiaan", 10);
+//     setCookie("bar_social", 0);
+//   } else if ((current == 5 && last == 4) || (current == 5 && last == 28)) {
+//     setCookie("bar_kesehatan", 75);
+//     setCookie("bar_kebahagiaan", 75);
+//     setCookie("bar_social", 75);
+//   } else if (current == 5 && last == 12) {
+//     setCookie("bar_kesehatan", 75);
+//     setCookie("bar_kebahagiaan", 82.5);
+//     setCookie("bar_social", 75);
+//   } else if (
+//     (current == 28 && last == 5) ||
+//     (current == 28 && last == 28) ||
+//     (current == 28 && last == 29)
+//   ) {
+//     setCookie("bar_kesehatan", 70);
+//     setCookie("bar_kebahagiaan", 70);
+//     setCookie("bar_social", 70);
+//   } else if (
+//     (current == 29 && last == 28) ||
+//     (current == 29 && last == 29) ||
+//     (current == 29 && last == 30)
+//   ) {
+//     setCookie("bar_kesehatan", 60);
+//     setCookie("bar_kebahagiaan", 60);
+//     setCookie("bar_social", 60);
+//   } else if (
+//     (current == 30 && last == 29) ||
+//     (current == 30 && last == 30) ||
+//     (current == 30 && last == 31)
+//   ) {
+//     setCookie("bar_kesehatan", 55);
+//     setCookie("bar_kebahagiaan", 65);
+//     setCookie("bar_social", 55);
+//   } else if (
+//     (current == 31 && last == 31) ||
+//     (current == 31 && last == 30) ||
+//     (current == 31 && last == 32) ||
+//     (current == 31 && last == "end7")
+//   ) {
+//     setCookie("bar_kesehatan", 60);
+//     setCookie("bar_kebahagiaan", 70);
+//     setCookie("bar_social", 60);
+//   } else if (
+//     (current == 32 && last == "end7") ||
+//     (current == 32 && last == 32) ||
+//     (current == 32 && last == 31)
+//   ) {
+//     setCookie("bar_kesehatan", 40);
+//     setCookie("bar_kebahagiaan", 50);
+//     setCookie("bar_social", 40);
+//   } else if (current == "end7" && last == 32) {
+//     setCookie("bar_kesehatan", 35);
+//     setCookie("bar_kebahagiaan", 45);
+//     setCookie("bar_social", 0);
+//   } else if (current == "end7" && last == 31) {
+//     setCookie("bar_kesehatan", 55);
+//     setCookie("bar_kebahagiaan", 65);
+//     setCookie("bar_social", 0);
+//   } else if (current == 9 && last == 28) {
+//     setCookie("bar_kesehatan", 60);
+//     setCookie("bar_kebahagiaan", 60);
+//     setCookie("bar_social", 60);
+//   } else if (
+//     (current == 6 && last == 5) ||
+//     (current == 6 && last == 15) ||
+//     (current == 6 && last == 7)
+//   ) {
+//     setCookie("bar_kesehatan", 65);
+//     setCookie("bar_kebahagiaan", 65);
+//     setCookie("bar_social", 65);
+//   } else if (
+//     (current == 7 && last == 6) ||
+//     (current == 7 && last == 8) ||
+//     (current == 7 && last == 9)
+//   ) {
+//     setCookie("bar_kesehatan", 60);
+//     setCookie("bar_kebahagiaan", 60);
+//     setCookie("bar_social", 60);
+//   } else if (
+//     (current == 8 && last == 7) ||
+//     (current == 8 && last == 17) ||
+//     (current == 8 && last == 9)
+//   ) {
+//     setCookie("bar_kesehatan", 60);
+//     setCookie("bar_kebahagiaan", 60);
+//     setCookie("bar_social", 60);
+//   } else if (current == 9 && last == 8) {
+//     setCookie("bar_kesehatan", 60);
+//     setCookie("bar_kebahagiaan", 60);
+//     setCookie("bar_social", 60);
+//   }
 
-  let bar_kesehatan = getCookie("bar_kesehatan");
-  let bar_kebahagiaan = getCookie("bar_kebahagiaan");
-  let bar_social = getCookie("bar_social");
+//   let bar_kesehatan = getCookie("bar_kesehatan");
+//   let bar_kebahagiaan = getCookie("bar_kebahagiaan");
+//   let bar_social = getCookie("bar_social");
 
-  document.querySelector("#bar_kesehatan .progress-bar").style.width =
-    bar_kesehatan + "%";
-  document.querySelector("#bar_kesehatan span").innerHTML = bar_kesehatan + "%";
+//   document.querySelector("#bar_kesehatan .progress-bar").style.width =
+//     bar_kesehatan + "%";
+//   document.querySelector("#bar_kesehatan span").innerHTML = bar_kesehatan + "%";
 
-  document.querySelector("#bar_kebahagiaan .progress-bar").style.width =
-    bar_kebahagiaan + "%";
-  document.querySelector("#bar_kebahagiaan span").innerHTML =
-    bar_kebahagiaan + "%";
+//   document.querySelector("#bar_kebahagiaan .progress-bar").style.width =
+//     bar_kebahagiaan + "%";
+//   document.querySelector("#bar_kebahagiaan span").innerHTML =
+//     bar_kebahagiaan + "%";
 
-  document.querySelector("#bar_social .progress-bar").style.width =
-    bar_social + "%";
-  document.querySelector("#bar_social span").innerHTML = bar_social + "%";
-}
+//   document.querySelector("#bar_social .progress-bar").style.width =
+//     bar_social + "%";
+//   document.querySelector("#bar_social span").innerHTML = bar_social + "%";
+// }
 
 // Adegan
 function goto_(tujuan, a, b, c) {
