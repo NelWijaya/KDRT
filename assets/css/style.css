@@ -63,8 +63,25 @@ body {
     background-size: 50px;
   }
 
+  #ribbon ul li p {
+    font-size: 32px !important;
+    font-weight: 700 !important;
+  }
+
   #case h1 {
     font-size: 32px !important;
+  }
+
+  #case h2 {
+    font-size: 24px !important;
+  }
+
+  #case h5 {
+    font-size: 18px !important;
+  }
+
+  #case img.rbn {
+    width: 30px !important;
   }
 }
 
@@ -102,7 +119,29 @@ body {
   border-radius: 10px;
 }
 
-.btn-secondary:hover {
+.btn-third {
+  background-color: #f7efe5 !important;
+  color: black !important;
+  font-weight: 700 !important;
+  padding: 20px !important;
+  font-size: 48px !important;
+  border: #f7efe5 !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.btn-modal {
+  background-color: #c3acd0 !important;
+  color: white !important;
+  font-weight: 700 !important;
+  padding: 20px 48px !important;
+  font-size: 32px !important;
+  border: #c3acd0 !important;
+  border-radius: 10px;
+}
+
+.btn-secondary:hover,
+.btn-modal:hover {
   background-color: #9b76b1 !important;
   border: #9b76b1 !important;
 }
@@ -138,6 +177,18 @@ body {
   color: #674188;
   font-weight: 700;
 }
+#case h5 {
+  font-size: 24px;
+}
+
+#case img.rbn {
+  width: 80px;
+}
+
+#case h2 {
+  font-size: 48px;
+  font-weight: 400;
+}
 
 #ribbon a.btn-white {
   background-color: white !important;
@@ -162,7 +213,7 @@ body {
 
 /* COLOR */
 .bg-color-purple {
-  background-color: #c3acd0;
+  background-color: #c3acd0 !important;
 }
 
 .bg-wh {
@@ -277,3 +328,5 @@ span.pp {
   font-weight: 800;
   padding: 3px 10px;
 }
+
+/* Modal */

@@ -267,3 +267,48 @@ function goto_(tujuan, a, b, c) {
 
   location.href = "/pages/adegan/adegan_" + tujuan + ".html";
 }
+
+function show_ribbon() {
+  let end1 = getCookie("end1");
+  if (end1 == 1) {
+    document.getElementById("end1").innerHTML = "Tewas di tangan suami";
+  }
+  let end2 = getCookie("end2");
+  if (end2 == 1) {
+    document.getElementById("end2").innerHTML =
+      "Laporanku tidak ditindaklanjuti";
+  }
+  let end3 = getCookie("end3");
+  if (end3 == 1) {
+    document.getElementById("end3").innerHTML = "Disebut Terlalu Bucin";
+  }
+  let end4 = getCookie("end4");
+  if (end4 == 1) {
+    document.getElementById("end4").innerHTML = "Tewas Janda Bolong";
+  }
+  let end5 = getCookie("end5");
+  if (end5 == 1) {
+    document.getElementById("end5").innerHTML = "Trauma berhubungan asmara";
+  }
+  let end6 = getCookie("end6");
+  if (end6 == 1) {
+    document.getElementById("end6").innerHTML = "Anakku diambil mantan suami";
+  }
+  let end7 = getCookie("end7");
+  if (end7 == 1) {
+    document.getElementById("end7").innerHTML = "Dihujat umbar aib pasangan";
+  }
+
+  if (
+    end1 == 1 &&
+    end2 == 1 &&
+    end3 == 1 &&
+    end4 == 1 &&
+    end5 == 1 &&
+    end6 == 1 &&
+    end7 == 1
+  ) {
+    var element = document.getElementById("final-rbn");
+    element.classList.remove("d-none");
+  }
+}
