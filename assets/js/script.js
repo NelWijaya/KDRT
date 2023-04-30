@@ -284,7 +284,7 @@ function show_ribbon() {
   }
   let end4 = getCookie("end4");
   if (end4 == 1) {
-    document.getElementById("end4").innerHTML = "Tewas Janda Bolong";
+    document.getElementById("end4").innerHTML = "Disebut Janda Bolong";
   }
   let end5 = getCookie("end5");
   if (end5 == 1) {

@@ -1,0 +1,6 @@
+#board {
+  /* background-color: skyblue; */
+  max-width: 360px !important;
+  max-height: 640px !important;
+  background-image: url("/assets/public/images/flappybirdbg.png");
+}
