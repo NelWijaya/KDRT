@@ -17,14 +17,24 @@
     <title>KDRT</title>
   </head>
   <body
-    class="d-flex align-items-center"
-    style="background-color: #f9f0e4"
+    class="bg-color-purple d-flex align-items-center"
     id="op-peringatan"
+    onclick="goto_op(1);"
   >
-    <video id="video1" autoplay>
-      <source src="/assets/public/videos/open.mp4" type="video/mp4" />
-      Your browser does not support HTML5 video.
-    </video>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <h3 class="peringatan">PERINGATAN</h3>
+        </div>
+      </div>
+      <div class="row">
+        <p>
+          Permainan ini mengandung deskripsi kekerasan verbal, fisik, hingga
+          seksual. Dikhususkan untuk orang dewasa di atas 17 tahun.
+        </p>
+        <p class="small">Klik di mana saja untuk melanjutkan.</p>
+      </div>
+    </div>
 
     <script src="/assets/js/script.js"></script>
     <script
@@ -38,11 +48,6 @@
     -->
     <script>
       setCookie("last", 0);
-
-      video = document.getElementById("video1");
-      video.addEventListener("ended", function () {
-        window.location.href = "/second.html";
-      });
     </script>
   </body>
 </html>

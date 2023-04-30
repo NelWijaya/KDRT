@@ -55,17 +55,12 @@ body {
   #ribbon ul li {
     list-style-image: none !important;
     list-style: none;
-    padding: 30px 30px;
+    padding: 10px 10px 10px 50px !important;
     margin-left: -40px;
     background-image: url(/assets/public/images/pita\ 1.svg);
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 50px;
-  }
-
-  #ribbon ul li p {
-    font-size: 32px !important;
-    font-weight: 700 !important;
   }
 
   #case h1 {
@@ -304,6 +299,21 @@ span.pp {
 
 #ribbon ul li {
   list-style-image: url(/assets/public/images/pita.png);
+  cursor: pointer;
+  padding: 10px;
+}
+
+#ribbon ul li a.ending {
+  width: 100%;
+  font-size: 32px !important;
+  font-weight: 700 !important;
+  color: black !important;
+  text-decoration: none !important;
+}
+
+#ribbon .artikel p {
+  font-size: 18px;
+  font-weight: 400;
 }
 
 #case .container {
@@ -465,10 +475,115 @@ span.pp {
   opacity: 1;
 }
 
+#case #board-circle #blok-1,
+#case #board-circle #blok-2,
+#case #board-circle #blok-3,
+#case #board-circle #blok-4 {
+  width: 150px;
+  height: 150px;
+  border: solid 1px black;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#case #board-circle #blok-1 {
+  top: 50px;
+  left: 250px;
+}
+
+#case #board-circle #blok-2 {
+  top: 70px;
+  left: 600px;
+}
+
+#case #board-circle #blok-3 {
+  top: 400px;
+  left: 500px;
+}
+
+#case #board-circle #blok-4 {
+  top: 320px;
+  left: 160px;
+}
+
+#case #option-1,
+#case #option-2,
+#case #option-3,
+#case #option-4 {
+  width: 150px;
+  height: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: solid black 1px;
+}
+
+#case #option-1,
+.option-1 {
+  background-image: url(/assets/public/images/end2-calm.png);
+}
+
+#case #option-2,
+.option-2 {
+  background-image: url(/assets/public/images/end2-Incident.png);
+}
+
+#case #option-3,
+.option-3 {
+  background-image: url(/assets/public/images/end2-reconcilation.png);
+}
+
+#case #option-4,
+.option-4 {
+  background-image: url(/assets/public/images/end2-tension.png);
+}
+
+#case #board-circle {
+  width: 800px;
+  height: 600px;
+  border: solid 1px black;
+  background-image: url(/assets/public/images/end2-none.png);
+  background-size: cover;
+  position: relative;
+}
+
 @media only screen and (max-width: 620px) {
   #case img,
   #case #mini1 {
     max-width: 300px !important;
+  }
+
+  #case #board-circle {
+    width: 360px;
+    height: 260px;
+  }
+
+  #case #board-circle #blok-1,
+  #case #board-circle #blok-2,
+  #case #board-circle #blok-3,
+  #case #board-circle #blok-4 {
+    width: 60px;
+    height: 60px;
+  }
+
+  #case #board-circle #blok-1 {
+    top: 30px;
+    left: 100px;
+  }
+
+  #case #board-circle #blok-2 {
+    top: 30px;
+    left: 250px;
+  }
+
+  #case #board-circle #blok-3 {
+    top: 140px;
+    left: 220px;
+  }
+
+  #case #board-circle #blok-4 {
+    top: 140px;
+    left: 80px;
   }
 
   #case #btn-1 {
@@ -582,4 +697,16 @@ span.pp {
     border: 3px solid red;
     opacity: 1;
   }
+
+  #ribbon ul li a.ending {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: black !important;
+    text-decoration: none !important;
+  }
+}
+
+#op-peringatan video {
+  width: 100%;
+  position: absolute;
 }
