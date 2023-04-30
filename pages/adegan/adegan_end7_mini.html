@@ -18,7 +18,7 @@
   </head>
   <body class="d-flex align-items-center bg-color-purple" id="case">
     <div class="container text-center">
-      <div class="row mt-5">
+      <div class="row mt-md-3">
         <div class="row d-flex justify-content-center">
           <div class="pt-3">
             <h2 class="ff-mansalva">
@@ -27,7 +27,6 @@
                 class="rbn"
                 alt=""
               />Dapatkan pita ungumu!
-
               <img
                 src="/assets/public/images/Ribbon 2.png"
                 class="rbn"
@@ -36,30 +35,29 @@
             </h2>
           </div>
         </div>
-        <p class="mt-md-5 pt-5">
-          KDRT jenis verbal menjadi salah satu kekerasan yang sulit untuk
-          dibuktikan di pengadilan secara praktik. Berikut ini yang bukan KDRT
-          verbal adalah:
-          <br /><br />
-          A. Bodoh banget, sih gitu aja gak bisa! <br />
-          B. Kalau kamu sayang keluarga, kamu gak bakal laporin ini! <br />
-          C. Kamu lucu banget, deh! <br />
-          D. Kamu tuh gendut, makanya gak ada yang mau denganmu kecuali saya!
-        </p>
+        <p class="mt-md-5">Mana yang harus aku hapus chatnya?</p>
       </div>
 
-      <div class="row btn-bottom d-flex text-center mx-0 pb-5">
-        <a class="btn btn-third mt-3 mt-md-0 mx-auto" onclick="alert_()"> A </a>
-        <a class="btn btn-third mt-3 mt-md-0 mx-auto" onclick="alert_()"> B </a>
+      <div class="row text-center mx-0">
+        <div id="canvas" class="mx-auto">
+          <img
+            src="/assets/public/images/Minigames 4.png"
+            alt="Minigames 4.png"
+          />
+          <div id="btn-1" onclick="done_()"></div>
+        </div>
+      </div>
+
+      <div class="row btn-bottom d-flex text-center mx-0 py-md-5 pb-5 pt-3">
         <a
-          class="btn btn-third mt-3 mt-md-0 mx-auto"
+          class="btn btn-third mt-md-0 mx-auto d-none"
+          id="lanjut"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
           onclick="get_ribbon()"
         >
-          C
+          Lanjut
         </a>
-        <a class="btn btn-third mt-3 mt-md-0 mx-auto" onclick="alert_()"> D </a>
       </div>
 
       <!-- Modal -->
@@ -80,7 +78,7 @@
                       src="/assets/public/images/Ribbon 2.png"
                       class="rbn"
                       alt=""
-                    />Laporanku tidak ditindaklanjuti
+                    />Aku dihujat mengumbar aib pasangan
 
                     <img
                       src="/assets/public/images/Ribbon 2.png"
@@ -89,17 +87,19 @@
                     />
                   </h2>
                 </div>
-                <p class="mt-md-5 pt-5">
-                  KDRT jenis verbal menjadi salah satu kekerasan yang sulit
-                  untuk dibuktikan di pengadilan secara praktik. Berikut ini
-                  yang bukan KDRT verbal adalah:
+                <h5 class="mt-md-5 pt-5 pt-md-0">
+                  Kamu berhasil mendapatkan empat dari tujuh ending!
+                </h5>
+                <p class="mt-md-5 pt-5 pt-md-0">
+                  Pernikahan adalah ranah personal. Bijaklah menggunakan media
+                  sosial, terlebih bisa ada kemungkinan pelaku kekerasan untuk
+                  menggugat balik atas pencemaran nama baik.
                   <br /><br />
-                  A. Bodoh banget, sih gitu aja gak bisa! <br />
-                  B. Kalau kamu sayang keluarga, kamu gak bakal laporin ini!
-                  <br />
-                  C. Kamu lucu banget, deh! <br />
-                  D. Kamu tuh gendut, makanya gak ada yang mau denganmu kecuali
-                  saya!
+                  Terlepas dari media sosial, kamu bisa melaporkan KDRT ke
+                  Kementrian Pemberdayaan Perempuan dan Anak melalui Sahabat
+                  Perempuan dan Anak (SAPA129) lewat hotline 129 atau WA
+                  08111-129-129. Kamu juga bisa meminta bantuan hukum dalam
+                  melaporkan KDRT melalui LBH APIK.
                 </p>
               </div>
 
@@ -133,12 +133,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
     <script>
-      function alert_() {
-        alert("Wrong Answer !!!");
+      function done_() {
+        var element = document.getElementById("lanjut");
+        element.classList.remove("d-none");
       }
 
       function get_ribbon() {
-        setCookie("end2", 1);
+        setCookie("end7", 1);
       }
       var myModal = document.getElementById("myModal");
       var myInput = document.getElementById("myInput");
