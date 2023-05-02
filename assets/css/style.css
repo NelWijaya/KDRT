@@ -238,9 +238,22 @@ p {
 }
 
 #rules,
-#menu,
-#case {
+#menu {
   background-color: #f7efe5;
+}
+
+#case {
+  background-color: #fffbf5;
+}
+
+#ribbon p.article {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#ribbon h4.article {
+  font-size: 32px;
+  font-weight: 700;
 }
 
 .peringatan {
@@ -551,6 +564,14 @@ span.pp {
   #case img,
   #case #mini1 {
     max-width: 300px !important;
+  }
+
+  #ribbon h4.article {
+    font-size: 24px;
+  }
+
+  #ribbon p.article {
+    font-size: 16px;
   }
 
   #case #board-circle {
